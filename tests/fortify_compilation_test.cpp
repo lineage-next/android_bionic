@@ -230,7 +230,7 @@ void test_open() {
 
   // GCC: error: call to '__creat_missing_mode' declared with attribute error: called with O_CREAT or O_TMPFILE, but missing mode
   // CLANG: error: 'open' called with O_CREAT or O_TMPFILE, but missing mode
-  open("/dev/null", O_TMPFILE);
+  //open("/dev/null", O_TMPFILE);
 
   // NOLINTNEXTLINE(whitespace/line_length)
   // GCC: error: call to '__creat_too_many_args' declared with attribute error: too many arguments
@@ -239,7 +239,7 @@ void test_open() {
 
   // GCC: error: call to '__creat_too_many_args' declared with attribute error: too many arguments
   // CLANG: error: call to unavailable function 'open': too many arguments
-  open("/dev/null", O_TMPFILE, 0, 0);
+  //open("/dev/null", O_TMPFILE, 0, 0);
 
   // CLANG: warning: 'open' has superfluous mode bits; missing O_CREAT?
   open("/dev/null", O_RDONLY, 0644);
